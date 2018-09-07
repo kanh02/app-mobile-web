@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="icon" href="android/mipmap-hdpi/ic_launcher.png">
+	<link rel="icon" href="ios/iTunesArtwork@2x.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>NYSL</title>
+</head>
+<body>
+
+
+
+
+
+	<!-- Side Navigation -->
+
+	<nav>
+		<div class="panel-group">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" href="#collapse1"><span class="glyphicon glyphicon-home"></span></a>
+					</h4>
+				</div>
+				<div id="collapse1" class="panel-collapse collapse">
+					<ul class="list-group">
+						<li class="list-group-item">About</li>
+						<li class="list-group-item">Register</li>
+						<li class="list-group-item">Game info</li>
+						<li class="list-group-item">Rules</li>
+						<li class="list-group-item">Contact</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Header -->
+
+	<header class="container" id="Header">
+		<div class="center">
+			<h4 class="text-center" style="color: orangered">NYSL</h4>
+			<form>
+				Search NYSL:
+				<input type="search" name="search">
+				<i class="material-icons">search</i>
+			</form>
+		</div>
+		<div class="text-right">
+			<div>
+				<image src="images/nysl_logo.png" width="94" height="80"></image>
+			</div>
+			<div><button><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></button></div>
+			<div><button><a href="#"><span class="glyphicons glyphicons-chat"></span> chat</a></button></div>
+		</div>
+	</header>
+
+
+
+<!-- button1 -->
+
+	<div class="text-center" id="Bott">
+			<div class="container" >
+				<button>Play Now</button>
+			</div>
+	</div>
+
+<!-- Modal1 -->
+
+		<div id="primer" class="modal">
+			<div class="modal-content-card-4-animate-top">
+				<header class="container">
+					<span onclick="document.getElementById('primer').style.display='none'" class="button-display-topright">×</span>
+					<h4>Playing Now</h4>
+				</header>
+				<div class="padding" id="table">
+					<tr>
+						<th>Team:</th>
+						<th>Site:</th>
+						<th>Time:</th>
+					</tr>
+				</div>
+				<footer class="container">
+					<p>NYSL</p>
+				</footer>
+			</div>
+		</div>
+
+<!-- button2 -->
+	
+	<div class="text-center" id="Bott">
+			<div class="container" >
+				<button>Players</button>
+			</div>
+	</div>
+<!-- Modal2 -->
+
+		<div id="segundo" class="modal">
+			<div class="modal-content-card-4-animate-top">
+				<header class="container">
+					<span onclick="document.getElementById('segundo').style.display='none'" class="button-display-topright">×</span>
+					<h4>Player</h4>
+				</header>
+				<div class="padding" id="table2">
+					   <input class="input" type="text" required><label>Name Player</label>
+					<tr>
+						<th>Name:</th>
+						<th>Position:</th>
+						<th>Next Game:</th>
+						<th>Versus Team:</th>
+					</tr>
+				</div>
+				<footer class="container">
+					<p>NYSL</p>
+				</footer>
+			</div>
+		</div>
+	
+<!-- button3 -->
+	<div class="text-center" id="Bott">
+			<div class="container" >
+				<button>Voluntiers</button>
+			</div>
+	</div>
+	
+<!-- Modal3 -->
+
+		<div id="tercero" class="modal">
+			<div class="modal-content-card-4-animate-top">
+				<header class="container">
+					<span onclick="document.getElementById('tercero').style.display='none'" class="button-display-topright">×</span>
+					<h4>Voluntiers</h4>
+				</header>
+				<div class="padding">
+					   
+					<p>For the all parents we, have a lot work to do, creating whit us events to optain fonds for upgrade our team, to be ready for next league, and trainnig kids with the best tecniques and coaching. </p>
+					<p>On morning, to 10:00am, at noon, on Greenbay camp.</p>
+					<p>Or in the afternoon, to 15:00pm to 17:00pm, on AJ Katzenmaier. </p>
+					<p>wait for all help you can give us</p>
+				</div>
+				<footer class="container">
+					<p>NYSL</p>
+				</footer>
+			</div>
+		</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+<!-- button4 -->
+	<div class="text-center" id="Bott">
+			<div class="container" >
+				<button>Register</button>
+			</div>
+	</div>
+<!-- button5 -->
+	<div class="text-center" id="Bott">
+			<div class="container" >
+				<button>News</button>
+			</div>
+	</div>
+
+
+
+		<div class="text-right">
+			<div class="container">
+			<button><a href="#"><span class="glyphicon glyphicon-info-sign"></span></a>info</button>
+			<button><a href="#"><span class="glyphicon glyphicon-envelope"></span></a>mail</button>
+			</div>
+		</div>
+
+	<footer class="text-center">all rigths reserved @2018</footer>
+
+	<script src="js/powerful.js"></script>
+	<script src="css/style.css"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC_5iMP5dL2pQvRpk9hfK2K-dyMgp9ygRg",
+    authDomain: "mobile-nysl.firebaseapp.com",
+    databaseURL: "https://mobile-nysl.firebaseio.com",
+    projectId: "mobile-nysl",
+    storageBucket: "mobile-nysl.appspot.com",
+    messagingSenderId: "362392854931"
+  };
+  firebase.initializeApp(config);
+</script>
+
+</body>
+
+</html>
