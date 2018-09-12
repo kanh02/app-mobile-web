@@ -16,336 +16,317 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<title>NYSL</title>
 </head>
+
 <body>
 
-
-
-	
-
 	<!-- Side Navigation -->
-
-	<nav>
-		<div class="panel-group">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title">
-						<a data-toggle="collapse" href="#collapse1"><span class="glyphicon glyphicon-home"></span></a>
-					</h4>
-				</div>
-				<div id="collapse1" class="panel-collapse collapse">
-					<ul class="list-group">
-						<li class="list-group-item">About</li>
-						<li class="list-group-item">Register</li>
-						<li class="list-group-item">Game info</li>
-						<li class="list-group-item">Rules</li>
-						<li class="list-group-item"><a href="mailto:someone@example.com?Subje" target="_top">Contact</a></li>
-					</ul>
+	<div>
+		<nav>
+			<div class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" href="#collapse1"><span class="glyphicon glyphicon-home"></span></a>
+						</h4>
+					</div>
+					<div id="collapse1" class="panel-collapse collapse">
+						<ul class="list-group">
+							<li class="list-group-item">About</li>
+							<li class="list-group-item">Register</li>
+							<li class="list-group-item">Game info</li>
+							<li class="list-group-item">Rules</li>
+							<li class="list-group-item"><a href="mailto:someone@example.com?Subje" target="_top">Contact</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-	</nav>
+		</nav>
 
+	</div>
 	<!-- Header -->
-
-	<header class="container" id="Header">
-		<div class="center">
-			<h4 class="text-center" style="color: orangered">NYSL</h4>
-			<form>
-				Search NYSL:
-				<input type="search" id="search">
-				<i class="material-icons">search</i>
-			</form>
-		</div>
-		<div class="text-right">
-			<div>
-				<image src="images/nysl_logo.png" width="94" height="80"></image>
+	<div style="margin-top: 1;">
+		<header class="container" id="Header">
+			<div  id="log">
+				<h2 class="text-center" style="color: black"><a target="_top">NYSL</a>NYSL</h2>
+				
+					<image src="images/nysl_logo.png" width="64" height="60" ></image>
+				
 			</div>
-			<div><button><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></button></div>
-			<div><button><a href="#"><span class="glyphicons glyphicons-chat"></span> chat</a></button></div>
-		</div>
-	</header>
+			<div class="text-right">
+				<div><button><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></button></div>
+				<div><button><a href="#"><span class="glyphicons glyphicons-chat"></span> chat</a></button></div>
+			</div>
+		</header>
+	</div>
 
 
+	<div>
+		<!-- button1 -->
 
-<!-- button1 -->
-
-	<div class="text-center" id="Bott">
-			<div class="container" >
+		<div class="text-center" id="Bott1">
+			<div class="container">
 				<button class="button" style="vertical-align:middle"><span>Play Now</span></button>
 			</div>
-	</div>
+		</div>
 
-<!-- button2 -->
-	
-	<div class="text-center" id="Bott">
-			<div class="container" >
+		<!-- button2 -->
+
+		<div class="text-center" id="Bott2">
+			<div class="container">
 				<button class="button" style="vertical-align:middle"><span>Players</span></button>
 			</div>
-	</div>
-	
-<!-- button3 -->
-	<div class="text-center" id="Bott">
-			<div class="container" >
+		</div>
+
+		<!-- button3 -->
+		<div class="text-center" id="Bott3">
+			<div class="container">
 				<button class="button" style="vertical-align:middle"><span>Volunteers</span></button>
 			</div>
-	</div>
-	
-<!-- button4 -->
-	<div class="text-center" id="Bott">
-			<div class="container" >
+		</div>
+
+		<!-- button4 -->
+		<div class="text-center" id="Bott4">
+			<div class="container">
 				<button class="button" style="vertical-align:middle"><span>Register</span></button>
 			</div>
-	</div>
-	
-<!-- button5 -->
-	<div class="text-center" id="Bott">
-			<div class="container" >
+		</div>
+
+		<!-- button5 -->
+		<div class="text-center" id="Bott5">
+			<div class="container">
 				<button class="button" style="vertical-align:middle"><span>News</span></button>
 			</div>
+		</div>
+
 	</div>
-	
-	
-	
-	
-	
-<!-- Modal1 -->
-
-		<div id="primer" >
-			<div>
-				<header class="container">
-<!--					<span onclick="document.getElementById('primer').style.display='none'" class="button-display-topright">×</span>-->
-					<h4>Playing Now</h4>
-				</header>
-				<div class="padding" >
-					<table id="table">
-						<tr>
-							<th>Team Local:</th>
-							<th>Team Host:</th>
-							<th>Site:</th>
-							<th>Time:</th>
-							<th>Date:</th>
-						</tr>
-					</table>
-				</div>
-			</div>
-		
 
 	
-<!-- Modal2 -->
 
-		<div id="segundo" >
-			<div >
-				<header class="container">
-<!--					<span onclick="document.getElementById('segundo').style.display='none'" class="button-display-topright">×</span>-->
-					<h4>Player</h4>
-				</header>
-				<div class="padding" >
-<!--					   <input class="input" type="text" required><label>Name Player</label>-->
-					<table id="table2">
-						<tr>
-							<th>Name:</th>
-							<th>Position:</th>
-							<th>Next Game:</th>
-							<th>Versus Team:</th>
-						</tr>
-					</table>
-				</div>
+	<!-- div1 -->
+	<div class="col-xs-12 col-md-12">		
+		<form>
+					Search NYSL:
+					<input type="text" id="search" onkeyup="filtro()">
+					<i class="material-icons">search</i>
+				</form>
+
+<!--
+		<div class="text-center" id="primer">
+			<h2>Playing Now</h2>
+			<div class="container">
+				<table id="table" class="table">
+					<tr>
+						<th>Team Local:</th>
+						<th>Team Host:</th>
+						<th>Date:</th>
+						<th>Site:</th>
+						<th>Time:</th>
+					</tr>
+				</table>
 			</div>
 		</div>
-	
-	
-<!-- Modal3 -->
+-->
 
-		<div id="tercero" >
-			
-				<header class="container">
-<!--					<span onclick="document.getElementById('tercero').style.display='none'" class="button-display-topright">×</span>-->
-					<h4>Voluntiers</h4>
-				</header>
-				<div class="padding">
-					   
-					<p>For the all parents we, have a lot work to do, creating whit us events to optain fonds for upgrade our team, to be ready for next league, and trainnig kids with the best tecniques and coaching. </p>
-					<p>On morning, to 10:00am, at noon, on Greenbay camp.</p>
-					<p>Or in the afternoon, to 15:00pm to 17:00pm, on AJ Katzenmaier. </p>
-					<p>wait for all help you can give us</p>
-				</div>
+
+		<!-- div2 -->
+
+<!--
+		<div class="text-center" id="segundo">
+			<div class="row">
+			<div class="col-xs-12 col-md-12">
+			<h2>Player</h2>
+			<div class="container">
+				<table id="table2" class="table">
+				</table>
 			</div>
-	
-
-<!-- Modal4 -->
-
-		<div id="cuarto" >
-			<div>
-				<header class="container">
-<!--					<span onclick="document.getElementById('cuarto').style.display='none'" class="button-display-topright">×</span>-->
-					<h4>Form Register</h4>
-				</header>
-				<div class="padding">
-			<form method="get" action="show_data.html"> 
-      <div class="stylized">
-        <label for="first_name">Player's First Name:</label>
-        <input type="text" name="first_name" id="first_name"/>
-        <label for="last_name">Last Name:</label>
-        <input type="text" name="last_name" id="last_name"/>
-        <label for="street_address">Street Address:</label>
-        <input type="text" name="street_address" id="street_address"/>
-        <label for="city">City:</label>
-        <input type="text" name="city" id="city"/>
-        <label for="zip">Zip Code:</label>
-        <input type="text" name="zip" id="zip"/>
-        <label for="birth_date">Birth Date (mm/dd/yyyy):</label>
-        <input type="text" name="birth_date" id="birth_date"/>
-        <label for="parent_guardian">Parent/Guardian Name:</label>
-        <input type="text" name="parent_guardian" id="parent_guardian"/>
-        <label for="contact_phone">Contact Phone:</label>
-        <input type="text" name="contact_phone" id="contact_phone"/>
-        <label for="contact_email">Contact Email:</label>
-        <input type="text" name="contact_email" id="contact_email"/>
-      </div>
-      <fieldset>
-        <legend>Gender:</legend>
-        <label for="female">Female</label>
-        <input type="radio" name="gender" id="female" value="female"/>
-        <label for="male">Male</label>
-        <input type="radio" name="gender" id="male" value="male"/>
-      </fieldset>
-      
-      <fieldset>
-        <legend>Grade:</legend>
-        <label for="pre_school">Pre-School</label>
-        <input type="radio" name="grade" id="pre_school" value="pre_school"/>
-        <label for="1st">1st</label>
-        <input type="radio" name="grade" id="1st" value="1st"/>
-        <label for="2nd">2nd</label>
-        <input type="radio" name="grade" id="2nd" value="2nd"/>
-        <label for="3rd">3rd</label>
-        <input type="radio" name="grade" id="3rd" value="3rd"/>
-        <label for="4th">4th</label>
-        <input type="radio" name="grade" id="4th" value="4th"/>
-        <label for="5th">5th</label>
-        <input type="radio" name="grade" id="5th" value="5th"/>
-      </fieldset>
-      
-      <fieldset>
-        <legend>Which elementary schools do you live near?</legend>
-        <label for="school_1" class="impinfo">First Closest School:</label>
-        <select name="school_1" id="school_1">
-          <option value="katzenmaier">AJ Katzenmaier</option>
-          <option value="greenbay">Greenbay</option>
-          <option value="yeager">Howard A Yeager</option>
-          <option value="hart">Marjorie P Hart</option>
-          <option value="north">North Elementary</option>
-          <option value="south">South Elementary</option>
-        </select>
-
-        <label for="school_2" class="impinfo">Second Closest School:</label>
-        <select name="school_2" id="school_2">
-          <option value="katzenmaier">AJ Katzenmaier</option>
-          <option value="greenbay">Greenbay</option>
-          <option value="yeager">Howard A Yeager</option>
-          <option value="hart">Marjorie P Hart</option>
-          <option value="north">North Elementary</option>
-          <option value="south">South Elementary</option>
-        </select>
-      </fieldset>
-      
-      <fieldset>
-        <legend>What position(s) do you normally play? <span class="note">(check all that apply)</span></legend>
-        <label for="n_forward">Forward</label>
-        <input type="checkbox" name="normal_position" id="n_forward" value="n_forward"/>
-        <label for="n_defense">Defense</label>
-        <input type="checkbox" name="normal_position" id="n_defense" value="n_defense"/>
-        <label for="n_midfield">Midfield</label>
-        <input type="checkbox" name="normal_position" id="n_midfield" value="n_midfield"/>
-        <label for="n_goalkeeper">Goalkeeper</label>
-        <input type="checkbox" name="normal_position" id="n_goalkeeper" value="n_goalkeeper"/>
-      </fieldset>
-      
-      <fieldset>
-        <legend>What position(s) do you want to play? <span class="note">(check all that apply)</span></legend>
-        <label for="w_forward">Forward</label>
-        <input type="checkbox" name="want_position" id="w_forward" value="w_forward"/>
-        <label for="w_defense">Defense</label>
-        <input type="checkbox" name="want_position" id="w_defense" value="w_defense"/>
-        <label for="w_midfield">Midfield</label>
-        <input type="checkbox" name="want_position" id="w_midfield" value="w_midfield"/>
-        <label for="w_goalkeeper">Goalkeeper</label>
-        <input type="checkbox" name="want_position" id="w_goalkeeper" value="w_goalkeeper"/>
-      </fieldset>
-      
-        <label for="uniform" class="impinfo">Already Have a Uniform</label>
-        <input type="checkbox" name="uniform" id="uniform"/>
-      
-      <fieldset>
-        <legend>Jersey Size:</legend>
-        <span class="uniformchoice">
-          <label for="j_y_small">Youth Small</label>
-          <input type="radio" name="jersey_size" id="j_y_small" value="j_y_small"/>
-          <label for="j_y_medium">Youth Medium</label>
-          <input type="radio" name="jersey_size" id="j_y_medium" value="j_y_medium"/>
-          <label for="j_y_large">Youth Large</label>
-          <input type="radio" name="jersey_size" id="j_y_large" value="j_y_large"/>
-          <label for="j_small">Small</label>
-          <input type="radio" name="jersey_size" id="j_small" value="j_small"/>
-          <label for="j_medium">Medium</label>
-          <input type="radio" name="jersey_size" id="j_medium" value="j_medium"/>
-          <label for="j_large">Large</label>
-          <input type="radio" name="jersey_size" id="j_large" value="j_large"/>
-          <label for="j_x_large">Extra-Large</label>
-          <input type="radio" name="jersey_size" id="j_x_large" value="j_x_large"/>
-        </span>
-      </fieldset>
-      <fieldset>
-        <legend>Shorts Size:</legend>
-        <span class="uniformchoice">
-          <label for="s_y_small">Youth Small</label>
-          <input type="radio" name="shorts_size" id="s_y_small" value="s_y_small"/>
-          <label for="s_y_medium">Youth Medium</label>
-          <input type="radio" name="shorts_size" id="s_y_medium" value="s_y_medium"/>
-          <label for="s_y_large">Youth Large</label>
-          <input type="radio" name="shorts_size" id="s_y_large" value="s_y_large"/>
-          <label for="s_small">Small</label>
-          <input type="radio" name="shorts_size" id="s_small" value="s_small"/>
-          <label for="s_medium">Medium</label>
-          <input type="radio" name="shorts_size" id="s_medium" value="s_medium"/>
-          <label for="s_large">Large</label>
-          <input type="radio" name="shorts_size" id="s_large" value="s_large"/>
-          <label for="s_x_large">Extra-Large</label>
-          <input type="radio" name="shorts_size" id="s_x_large" value="s_x_large"/>
-        </span>
-      </fieldset>
-      <h3>Permission to Play</h3>
-          <label for="signature">Parent/Guardian Signature:</label>
-          <input type="text" name="signature" id="signature"/>
-          <label for="sig_date">Date:</label>
-          <input type="text" name="sig_date" id="sig_date"/>
-      <p><input type="submit"/></p>
-      
-    </form>
-				</div>
 			</div>
 		</div>
-	
-<!-- Modal5 -->
+		</div>
+-->
 
-		<div id="quinto" >
-			<div >
-				<header class="container">
-<!--					<span onclick="document.getElementById('quinto').style.display='none'" class="button-display-topright">×</span>-->
-					<h4>News</h4>
-				</header>
-				<div class="padding">
-					 <div>
-					<p>With Trinidad Haunting and Brazil Looming, U.S. Soccer Is Still Searching for a Coach
-						It has been nearly a year since the United States failed to qualify for the 2018 World Cup, and the national team still doesn’t have a permanent coach. </p>
-					 </div>
+
+		<!-- div3 -->
+
+		<div class="text-center" id="tercero">
+			<h2>Voluntiers</h2>
+			<div class="container">
+
+				<p>For the all parents we, have a lot work to do, creating whit us events to optain fonds for upgrade our team, to be ready for next league, and trainnig kids with the best tecniques and coaching. </p>
+				<p>On morning, to 10:00am, at noon, on Greenbay camp.</p>
+				<p>Or in the afternoon, to 15:00pm to 17:00pm, on AJ Katzenmaier. </p>
+				<p>wait for all help you can give us</p>
+			</div>
+		</div>
+
+
+		<!-- div4 -->
+
+		<div class="text-justify" id="cuarto">
+			<div class="text-center">
+				<h2>Form Register</h2>
+			</div>
+			<div class="container">
+				<form method="get" action="show_data.html">
+					<div class="stylized">
+						<label for="first_name">Player's First Name:</label>
+						<input type="text" name="first_name" id="first_name" />
+						<label for="last_name">Last Name:</label>
+						<input type="text" name="last_name" id="last_name" />
+						<label for="street_address">Street Address:</label>
+						<input type="text" name="street_address" id="street_address" />
+						<label for="city">City:</label>
+						<input type="text" name="city" id="city" />
+						<label for="zip">Zip Code:</label>
+						<input type="text" name="zip" id="zip" />
+						<label for="birth_date">Birth Date (mm/dd/yyyy):</label>
+						<input type="text" name="birth_date" id="birth_date" />
+						<label for="parent_guardian">Parent/Guardian Name:</label>
+						<input type="text" name="parent_guardian" id="parent_guardian" />
+						<label for="contact_phone">Contact Phone:</label>
+						<input type="text" name="contact_phone" id="contact_phone" />
+						<label for="contact_email">Contact Email:</label>
+						<input type="text" name="contact_email" id="contact_email" />
+					</div>
+					<fieldset>
+						<legend>Gender:</legend>
+						<label for="female">Female</label>
+						<input type="radio" name="gender" id="female" value="female" />
+						<label for="male">Male</label>
+						<input type="radio" name="gender" id="male" value="male" />
+					</fieldset>
+
+					<fieldset>
+						<legend>Grade:</legend>
+						<label for="pre_school">Pre-School</label>
+						<input type="radio" name="grade" id="pre_school" value="pre_school" />
+						<label for="1st">1st</label>
+						<input type="radio" name="grade" id="1st" value="1st" />
+						<label for="2nd">2nd</label>
+						<input type="radio" name="grade" id="2nd" value="2nd" />
+						<label for="3rd">3rd</label>
+						<input type="radio" name="grade" id="3rd" value="3rd" />
+						<label for="4th">4th</label>
+						<input type="radio" name="grade" id="4th" value="4th" />
+						<label for="5th">5th</label>
+						<input type="radio" name="grade" id="5th" value="5th" />
+					</fieldset>
+
+					<fieldset>
+						<legend>Which elementary schools do you live near?</legend>
+						<label for="school_1" class="impinfo">First Closest School:</label>
+						<select name="school_1" id="school_1">
+							<option value="katzenmaier">AJ Katzenmaier</option>
+							<option value="greenbay">Greenbay</option>
+							<option value="yeager">Howard A Yeager</option>
+							<option value="hart">Marjorie P Hart</option>
+							<option value="north">North Elementary</option>
+							<option value="south">South Elementary</option>
+						</select>
+
+						<label for="school_2" class="impinfo">Second Closest School:</label>
+						<select name="school_2" id="school_2">
+							<option value="katzenmaier">AJ Katzenmaier</option>
+							<option value="greenbay">Greenbay</option>
+							<option value="yeager">Howard A Yeager</option>
+							<option value="hart">Marjorie P Hart</option>
+							<option value="north">North Elementary</option>
+							<option value="south">South Elementary</option>
+						</select>
+					</fieldset>
+
+					<fieldset>
+						<legend>What position(s) do you normally play? <span class="note">(check all that apply)</span></legend>
+						<label for="n_forward">Forward</label>
+						<input type="checkbox" name="normal_position" id="n_forward" value="n_forward" />
+						<label for="n_defense">Defense</label>
+						<input type="checkbox" name="normal_position" id="n_defense" value="n_defense" />
+						<label for="n_midfield">Midfield</label>
+						<input type="checkbox" name="normal_position" id="n_midfield" value="n_midfield" />
+						<label for="n_goalkeeper">Goalkeeper</label>
+						<input type="checkbox" name="normal_position" id="n_goalkeeper" value="n_goalkeeper" />
+					</fieldset>
+
+					<fieldset>
+						<legend>What position(s) do you want to play? <span class="note">(check all that apply)</span></legend>
+						<label for="w_forward">Forward</label>
+						<input type="checkbox" name="want_position" id="w_forward" value="w_forward" />
+						<label for="w_defense">Defense</label>
+						<input type="checkbox" name="want_position" id="w_defense" value="w_defense" />
+						<label for="w_midfield">Midfield</label>
+						<input type="checkbox" name="want_position" id="w_midfield" value="w_midfield" />
+						<label for="w_goalkeeper">Goalkeeper</label>
+						<input type="checkbox" name="want_position" id="w_goalkeeper" value="w_goalkeeper" />
+					</fieldset>
+
+					<label for="uniform" class="impinfo">Already Have a Uniform</label>
+					<input type="checkbox" name="uniform" id="uniform" />
+
+					<fieldset>
+						<legend>Jersey Size:</legend>
+						<span class="uniformchoice">
+							<label for="j_y_small">Youth Small</label>
+							<input type="radio" name="jersey_size" id="j_y_small" value="j_y_small" />
+							<label for="j_y_medium">Youth Medium</label>
+							<input type="radio" name="jersey_size" id="j_y_medium" value="j_y_medium" />
+							<label for="j_y_large">Youth Large</label>
+							<input type="radio" name="jersey_size" id="j_y_large" value="j_y_large" />
+							<label for="j_small">Small</label>
+							<input type="radio" name="jersey_size" id="j_small" value="j_small" />
+							<label for="j_medium">Medium</label>
+							<input type="radio" name="jersey_size" id="j_medium" value="j_medium" />
+							<label for="j_large">Large</label>
+							<input type="radio" name="jersey_size" id="j_large" value="j_large" />
+							<label for="j_x_large">Extra-Large</label>
+							<input type="radio" name="jersey_size" id="j_x_large" value="j_x_large" />
+						</span>
+					</fieldset>
+					<fieldset>
+						<legend>Shorts Size:</legend>
+						<span class="uniformchoice">
+							<label for="s_y_small">Youth Small</label>
+							<input type="radio" name="shorts_size" id="s_y_small" value="s_y_small" />
+							<label for="s_y_medium">Youth Medium</label>
+							<input type="radio" name="shorts_size" id="s_y_medium" value="s_y_medium" />
+							<label for="s_y_large">Youth Large</label>
+							<input type="radio" name="shorts_size" id="s_y_large" value="s_y_large" />
+							<label for="s_small">Small</label>
+							<input type="radio" name="shorts_size" id="s_small" value="s_small" />
+							<label for="s_medium">Medium</label>
+							<input type="radio" name="shorts_size" id="s_medium" value="s_medium" />
+							<label for="s_large">Large</label>
+							<input type="radio" name="shorts_size" id="s_large" value="s_large" />
+							<label for="s_x_large">Extra-Large</label>
+							<input type="radio" name="shorts_size" id="s_x_large" value="s_x_large" />
+						</span>
+					</fieldset>
+					<h3>Permission to Play</h3>
+					<label for="signature">Parent/Guardian Signature:</label>
+					<input type="text" name="signature" id="signature" />
+					<label for="sig_date">Date:</label>
+					<input type="text" name="sig_date" id="sig_date" />
+					<p><input type="submit" /></p>
+
+				</form>
+			</div>
+		</div>
+
+		<!-- div5 -->
+
+		<div class="text-center" id="quinto">
+			<div>
+				<h2>News</h2>
+				<div class="container">
 					<div>
-					<p>Clint Dempsey Retires Atop the American Record Books.
-						Dempsey announced his retirement on Wednesday, ending a 15-year career that included stints in the United States and in Europe. </p>
+						<p>With Trinidad Haunting and Brazil Looming, U.S. Soccer Is Still Searching for a Coach
+							It has been nearly a year since the United States failed to qualify for the 2018 World Cup, and the national team still doesn’t have a permanent coach. </p>
 					</div>
 					<div>
-					<p>College or Pro? It’s a Tough Call When You’re 12 Years Old
-						Olivia Moultrie and her family are challenging long-held assumptions about the best way to develop an American women’s soccer star. U.S. Soccer and the University of North Carolina are among those watching closely. </p>
+						<p>Clint Dempsey Retires Atop the American Record Books.
+							Dempsey announced his retirement on Wednesday, ending a 15-year career that included stints in the United States and in Europe. </p>
+					</div>
+					<div>
+						<p>College or Pro? It’s a Tough Call When You’re 12 Years Old
+							Olivia Moultrie and her family are challenging long-held assumptions about the best way to develop an American women’s soccer star. U.S. Soccer and the University of North Carolina are among those watching closely. </p>
 					</div>
 				</div>
 				<footer class="container">
@@ -353,49 +334,48 @@
 				</footer>
 			</div>
 		</div>
+	</div>
 
 
-
-		<div class="text-right">
-			<div class="container">
+	<div class="text-right">
+		<div class="container">
 			<button><a href="#"><span class="glyphicon glyphicon-info-sign"></span></a>info</button>
 			<button><a href="mailto:someone@example.com?Subje" target="_top"><span class="glyphicon glyphicon-envelope"></span></a>Email</button>
-			</div>
 		</div>
-	<!-- Modal information -->
-		<div id="info">
+	</div>
+
+
+
+	<!-- div information -->
+	<div id="info" class="container">
+		<div>
+			<h2>Information</h2>
 			<div>
-				<header class="container">
-<!--					<span onclick="document.getElementById('info').style.display='none'" class="button-display-topright">×</span>-->
-					<h4>Information</h4>
-				</header>
-				<div class="padding">
-					 <div>
-					<p>this is button information, if you have some problem with our web app, please contact us, and we fix any problem that you tell us. 
-				</div>
+				<p>this is button information, if you have some problem with our web app, please contact us, and we fix any problem that you tell us.
 			</div>
 		</div>
 	</div>
-	
+
 
 	<footer class="text-center">All Rigths Reserved @2018</footer>
 
-<!--	<script src="prueba.js"></script>-->
+	<!--	<script src="prueba.js"></script>-->
 	<script src="js/powerful.js"></script>
 	<script src="css/style.css"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyC_5iMP5dL2pQvRpk9hfK2K-dyMgp9ygRg",
-    authDomain: "mobile-nysl.firebaseapp.com",
-    databaseURL: "https://mobile-nysl.firebaseio.com",
-    projectId: "mobile-nysl",
-    storageBucket: "mobile-nysl.appspot.com",
-    messagingSenderId: "362392854931"
-  };
-  firebase.initializeApp(config);
-</script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyC_5iMP5dL2pQvRpk9hfK2K-dyMgp9ygRg",
+			authDomain: "mobile-nysl.firebaseapp.com",
+			databaseURL: "https://mobile-nysl.firebaseio.com",
+			projectId: "mobile-nysl",
+			storageBucket: "mobile-nysl.appspot.com",
+			messagingSenderId: "362392854931"
+		};
+		firebase.initializeApp(config);
+
+	</script>
 
 </body>
 

@@ -14,6 +14,7 @@ fetch("https://api.jsonbin.io/b/5b977d6fd6fe677c48d896d6", {
 	
 				table1();
 				table2();
+				filtro();
 		
 
 			}).then(function () {
@@ -23,17 +24,13 @@ fetch("https://api.jsonbin.io/b/5b977d6fd6fe677c48d896d6", {
 			})
 
 
-
+///////////////////////////////////////////////funciones/////////////////////////////////////////////////////////
 
 
 
 function table1(){
 	var table =document.getElementById("table");
-//		var equipo1 = document.createElement("tr");
-//		var equipo2 = document.createElement("tr");
-//		var fecha = document.createElement("tr");
-//		var tiempo = document.createElement("tr");
-//		var sitio = document.createElement("tr");
+
 	for(var x = 0; x < data.length; x++){
 		var tr = document.createElement("tr");
 		
@@ -60,29 +57,51 @@ function table1(){
 		
 	}
 }
-
-	
 function table2(){
 	
 	var table= document.getElementById("table2");
-		var ver =document.createElement("td");
-		var fech =document.createElement("td");
-	
-	
 	for(var a = 0; a < data.length; a++){
 		var tr =document.createElement("tr");
-//		var fecha = document.createElement("tr");
-//		var nametr = document.createElement("tr");
-//		var nametr2 = document.createElement("tr");
-//		var versus= document.createElement("tr");
+		var tr2 =document.createElement("tr");
+		var tr3 =document.createElement("tr");
+		var tr4 =document.createElement("tr");
+		var versus= document.createElement("tr");
+		var versuspos= document.createElement("tr");
 		
+		var ver =document.createElement("td");
+		var fech =document.createElement("td");
+		
+		var Name =document.createElement("td");
+		var Position  =document.createElement("td");
+		var Versus =document.createElement("td");
+		var Position2 =document.createElement("td");
+		var VersusTeam =document.createElement("td");
+		var Fecha =document.createElement("td");
+		
+		Name.textContent="Player";
+		tr.appendChild(Name);
+		
+		Position.textContent="Position";
+		tr2.appendChild(Position);
+		
+		Versus.textContent="Versus PLayer";
+		tr3.appendChild(Versus);
+		
+		Position2.textContent="Position";
+		tr4.appendChild(Position2);
+		
+		VersusTeam.textContent="Team Oponent"
+		versus.appendChild(VersusTeam);
+		
+		Fecha.textContent="Date";
+		versuspos.appendChild(Fecha);
 		
 		ver.textContent=data[a].equipo2.nombre;
-		tr.appendChild(ver);
+		versus.appendChild(ver);
 		
 		fech.textContent = data[a].fecha;
-		tr.appendChild(fech);
-		
+		versuspos.appendChild(fech);
+	
 		for( var d =0; d< data[a].equipo1.jugadores.length; d++ ){
 			
 			var nametd = document.createElement("td");
@@ -91,62 +110,48 @@ function table2(){
 			
 			var positd = document.createElement("td");
 			positd.textContent=data[a].equipo2.jugadores[d].posicion;
-			tr.appendChild(positd);
-			
+			tr2.appendChild(positd);
 		}
-		
 		for( var f =0; f< data[a].equipo2.jugadores.length; f++ ){
-			
 			var nametd2 = document.createElement("td");
 			nametd2.textContent=data[a].equipo2.jugadores[f].nombre;
-			tr.appendChild(nametd2);
+			tr3.appendChild(nametd2);
 			
 			var positd2 = document.createElement("td");
 			positd2.textContent=data[a].equipo2.jugadores[f].posicion;
-			tr.appendChild(positd2);
-			
-			
-			
-			
-			
-			
-			
+			tr4.appendChild(positd2);
 			
 		}
 		table.appendChild(tr);
-//		table.appendChild(nametr);
-//		table.appendChild(nametr2);
-//		table.appendChild(fecha);
-//		table.appendChild(versus);
+		table.appendChild(tr2);
+		table.appendChild(tr3);
+		table.appendChild(tr4);
+		table.appendChild(versus);
+		table.appendChild(versuspos);
 		}
 }
 
 
 
 
-//
-//
-// 	function filter (){
-//	 
-//	 	var selec = document.getElementById("Search");
-//		var fil= selec.value.toUpperCase();
-//		
-//	 
-//	 console.log(selec);
-//	 for(var x = 0; x < data.length; x ++){
-//		 var a = data[x];
-//		 if(data[x].indexOf(fil)>-1){
-//			 data[x].style.display="";}
-//		 else if(data[x].style.display = "none"){
-//			 
-//		 }
-//		 }
-//		 
-//		 console.log(data)
-//	 }
-//		
-//	
+function filtro() {
+  
+  var input = document.getElementById("search");
+  var filter = input.value.toUpperCase();
+  var table = document.getElementById("table");
+  var tr = table.getElementsByTagName("tr");
 
+  for (var i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    } 
+  }
+}
  
 
 
@@ -187,6 +192,7 @@ function table2(){
 //
 //
 //
+
 //
 //// Tabs
 //function openCity(evt, cityName) {
