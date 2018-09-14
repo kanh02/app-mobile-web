@@ -1,259 +1,230 @@
 //console.log(data)
 
 fetch("https://api.jsonbin.io/b/5b977d6fd6fe677c48d896d6", {
-				method: "GET",
-			
-			}).then(function (response) {
-				if (response.ok) {
-					return response.json();
-				}
-				throw new Error(response.statusText);
-			}).then(function (json) {
-				data = json.play
-				console.log(data);
-	
-				table1();
-				table2();
-				filtro();
-		
+	method: "GET",
 
-			}).then(function () {
+}).then(function (response) {
+	if (response.ok) {
+		return response.json();
+	}
+	throw new Error(response.statusText);
+}).then(function (json) {
+	data = json.play
+	console.log(data);
 
-			}).catch(function (error) {
-				console.log("Request failed: " + error.message);
-			})
+	lista();
+	table1();
+	lista2();
+	filtro();
+	f1();
+	f2();
+	f3();
+	f4();
+	f5();
+	f6();
+
+}).then(function () {
+
+}).catch(function (error) {
+	console.log("Request failed: " + error.message);
+})
 
 
 ///////////////////////////////////////////////funciones/////////////////////////////////////////////////////////
 
 
+function lista() {
+	var list = document.getElementById("myUL");
+	for (var a = 0; a < data.length; a++) {
+		var complete = document.createElement("li");
 
-function table1(){
-	var table =document.getElementById("table");
+		complete.setAttribute("data-time", data[a].hora)
+		complete.setAttribute("data-date", data[a].fecha)
+		complete.setAttribute("data-location", data[a].direccion)
+		complete.setAttribute("data-name", data[a].equipo1.nombre)
+		complete.setAttribute("data-name2", data[a].equipo2.nombre)
 
-	for(var x = 0; x < data.length; x++){
-		var tr = document.createElement("tr");
-		
-		var equip=document.createElement("td");
-		equip.textContent=data[x].equipo1.nombre;
-		tr.appendChild(equip);
-		
-		var equip2=document.createElement("td");
-		equip2.textContent=data[x].equipo2.nombre;
-		tr.appendChild(equip2);
-		
-		var date=document.createElement("td");
-		date.textContent=data[x].fecha;
-		tr.appendChild(date);
-		
-		var site=document.createElement("td");
-		site.textContent=data[x].direccion;
-		tr.appendChild(site)
-		
-		var time=document.createElement("td");
-		time.textContent=data[x].hora;
-		tr.appendChild(time);
-		table.appendChild(tr)
-		
+		complete.textContent = data[a].equipo1.nombre + " VS " + data[a].equipo2.nombre;
+
+		list.appendChild(complete);
 	}
 }
-function table2(){
-	
-	var table= document.getElementById("table2");
-	for(var a = 0; a < data.length; a++){
-		var tr =document.createElement("tr");
-		var tr2 =document.createElement("tr");
-		var tr3 =document.createElement("tr");
-		var tr4 =document.createElement("tr");
-		var versus= document.createElement("tr");
-		var versuspos= document.createElement("tr");
-		
-		var ver =document.createElement("td");
-		var fech =document.createElement("td");
-		
-		var Name =document.createElement("td");
-		var Position  =document.createElement("td");
-		var Versus =document.createElement("td");
-		var Position2 =document.createElement("td");
-		var VersusTeam =document.createElement("td");
-		var Fecha =document.createElement("td");
-		
-		Name.textContent="Player";
-		tr.appendChild(Name);
-		
-		Position.textContent="Position";
-		tr2.appendChild(Position);
-		
-		Versus.textContent="Versus PLayer";
-		tr3.appendChild(Versus);
-		
-		Position2.textContent="Position";
-		tr4.appendChild(Position2);
-		
-		VersusTeam.textContent="Team Oponent"
-		versus.appendChild(VersusTeam);
-		
-		Fecha.textContent="Date";
-		versuspos.appendChild(Fecha);
-		
-		ver.textContent=data[a].equipo2.nombre;
-		versus.appendChild(ver);
-		
-		fech.textContent = data[a].fecha;
-		versuspos.appendChild(fech);
-	
-		for( var d =0; d< data[a].equipo1.jugadores.length; d++ ){
-			
-			var nametd = document.createElement("td");
-			nametd.textContent=data[a].equipo1.jugadores[d].nombre;
-			tr.appendChild(nametd);
-			
-			var positd = document.createElement("td");
-			positd.textContent=data[a].equipo2.jugadores[d].posicion;
-			tr2.appendChild(positd);
-		}
-		for( var f =0; f< data[a].equipo2.jugadores.length; f++ ){
-			var nametd2 = document.createElement("td");
-			nametd2.textContent=data[a].equipo2.jugadores[f].nombre;
-			tr3.appendChild(nametd2);
-			
-			var positd2 = document.createElement("td");
-			positd2.textContent=data[a].equipo2.jugadores[f].posicion;
-			tr4.appendChild(positd2);
-			
-		}
-		table.appendChild(tr);
-		table.appendChild(tr2);
-		table.appendChild(tr3);
-		table.appendChild(tr4);
-		table.appendChild(versus);
-		table.appendChild(versuspos);
-		}
+
+
+function table1() {
+
+	var click = document.getElementById("myUL");
+
+	click.onclick = function () {
+
+
+		var z = event.target.getAttribute("data-date");
+
+		console.log(z)
+
+		var list = document.getElementById("list");
+
+		var equip = document.createElement("li");
+		var equip2 = document.createElement("li");
+		var date = document.createElement("li");
+		var site = document.createElement("li");
+		var time = document.createElement("li");
+
+
+		equip.textContent = event.target.getAttribute("data-name");
+		list.appendChild(equip);
+
+		equip2.textContent = event.target.getAttribute("data-name2");
+		list.appendChild(equip2);
+
+		date.textContent = event.target.getAttribute("data-date");
+		list.appendChild(date);
+
+		site.textContent = event.target.getAttribute("data-location");
+		list.appendChild(site)
+
+		time.textContent = event.target.getAttribute("data-time");
+		list.appendChild(time);
+
+	}
+	/////////pendiente el remove///////////////
+
 }
 
+function lista2() {
 
+	var list = document.getElementById("list1");
+	var list2= document.getElementById("list2");
+
+	for (var a = 0; a < data.length; a++) {
+
+		var lista = document.createElement("li");
+		var listaul = document.createElement("ul");
+		
+		var lista2 = document.createElement("li");
+		var listaul2 = document.createElement("ul");
+		
+		lista.textContent = data[a].equipo1.nombre + " " + data[a].fecha;
+		lista2.textContent = data[a].equipo2.nombre + " " + data[a].fecha;
+		
+
+		for (var d = 0; d < data[a].equipo1.jugadores.length; d++) {
+
+			var jugadores = document.createElement("li");
+			jugadores.textContent = data[a].equipo1.jugadores[d].nombre + " " + data[a].equipo1.jugadores[d].posicion;
+			listaul.appendChild(jugadores);
+		}
+			lista.appendChild(listaul);
+		
+
+		for (var f = 0; f < data[a].equipo2.jugadores.length; f++) {
+
+			var jugadores2 = document.createElement("li");
+			jugadores2.textContent = data[a].equipo2.jugadores[f].nombre + " " + data[a].equipo2.jugadores[f].posicion;
+			listaul2.appendChild(jugadores2);
+		}
+		lista2.appendChild(listaul2);
+		
+
+
+
+		list.appendChild(lista);
+		list2.appendChild(lista2);
+	}
+}
+
+////////////////////////////filtro//////////////////////////////////////////////
 
 
 function filtro() {
-  
-  var input = document.getElementById("search");
-  var filter = input.value.toUpperCase();
-  var table = document.getElementById("table");
-  var tr = table.getElementsByTagName("tr");
 
-  for (var i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    } 
-  }
+	var input = document.getElementById("search");
+	var filter = input.value.toUpperCase();
+	var table = document.getElementById("myUL");
+	var tr = table.getElementsByTagName("li");
+
+	for (var i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("a")[0];
+		if (td) {
+			if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+				tr[i].style.display = "";
+			} else {
+				tr[i].style.display = "none";
+			}
+		}
+	}
 }
- 
 
 
 
+/////////////////////////////show and hide//////////////////////////////////////////////////
+
+function f1() {
+    var x = document.getElementById("primer");
+	var z = document.getElementById("botmenu");
+	
+	
+    if (x.style.display === "none"){
+		//display="block"// {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function f2() {
+    var x = document.getElementById("segundo");
+	
+	
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function f3() {
+    var x = document.getElementById("tercero");
+	
+	
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function f4() {
+    var x = document.getElementById("cuarto");
+	
+	
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function f5() {
+    var x = document.getElementById("quinto");
+	
+	
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+function f6() {
+    var x = document.getElementById("info");
+	
+	
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Side navigation
-//function w3_open() {
-//    var x = document.getElementById("mySidebar");
-//    x.style.width = "100%";
-//    x.style.fontSize = "40px";
-//    x.style.paddingTop = "10%";
-//    x.style.display = "block";
-//}
-//function w3_close() {
-//    document.getElementById("mySidebar").style.display = "none";
-//}
-//
-//
-//
-//
-//
-//
-//
-
-//
-//// Tabs
-//function openCity(evt, cityName) {
-//  var i;
-//  var x = document.getElementsByClassName("city");
-//  for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";
-//  }
-//  var activebtn = document.getElementsByClassName("testbtn");
-//  for (i = 0; i < x.length; i++) {
-//      activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
-//  }
-//  document.getElementById(cityName).style.display = "block";
-//  evt.currentTarget.className += " w3-dark-grey";
-//}
-//
-//var mybtn = document.getElementsByClassName("testbtn")[0];
-//mybtn.click();
-//
-//// Accordions
-//function myAccFunc(id) {
-//    var x = document.getElementById(id);
-//    if (x.className.indexOf("w3-show") == -1) {
-//        x.className += " w3-show";
-//    } else { 
-//        x.className = x.className.replace(" w3-show", "");
-//    }
-//}
-//
-//// Slideshows
-//var slideIndex = 1;
-//
-//function plusDivs(n) {
-//slideIndex = slideIndex + n;
-//showDivs(slideIndex);
-//}
-//
-//function showDivs(n) {
-//  var x = document.getElementsByClassName("mySlides");
-//  if (n > x.length) {slideIndex = 1}    
-//  if (n < 1) {slideIndex = x.length} ;
-//  for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";  
-//  }
-//  x[slideIndex-1].style.display = "block";  
-//}
-//
-//showDivs(1);
-//
-//// Progress Bars
-//function move() {
-//  var elem = document.getElementById("myBar");   
-//  var width = 5;
-//  var id = setInterval(frame, 10);
-//  function frame() {
-//    if (width == 100) {
-//      clearInterval(id);
-//    } else {
-//      width++; 
-//      elem.style.width = width + '%'; 
-//      elem.innerHTML = width * 1  + '%';
-//    }
-//  }
-//}
