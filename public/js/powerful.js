@@ -1,4 +1,4 @@
-//console.log(data)
+
 
 fetch("https://api.jsonbin.io/b/5b977d6fd6fe677c48d896d6", {
 	method: "GET",
@@ -22,6 +22,7 @@ fetch("https://api.jsonbin.io/b/5b977d6fd6fe677c48d896d6", {
 	f4();
 	f5();
 	f6();
+//	button();
 
 }).then(function () {
 
@@ -56,14 +57,15 @@ function table1() {
 	var click = document.getElementById("myUL");
 
 	click.onclick = function () {
-
+		
+//falta el onclick que borre la tabla de arriba//
+		var list = document.getElementById("list");
+		list.innerHTML= "";
 
 		var z = event.target.getAttribute("data-date");
 
 		console.log(z)
-
-		var list = document.getElementById("list");
-
+		
 		var equip = document.createElement("li");
 		var equip2 = document.createElement("li");
 		var date = document.createElement("li");
@@ -94,19 +96,19 @@ function table1() {
 function lista2() {
 
 	var list = document.getElementById("list1");
-	var list2= document.getElementById("list2");
+	var list2 = document.getElementById("list2");
 
 	for (var a = 0; a < data.length; a++) {
 
 		var lista = document.createElement("li");
 		var listaul = document.createElement("ul");
-		
+
 		var lista2 = document.createElement("li");
 		var listaul2 = document.createElement("ul");
-		
+
 		lista.textContent = data[a].equipo1.nombre + " " + data[a].fecha;
 		lista2.textContent = data[a].equipo2.nombre + " " + data[a].fecha;
-		
+
 
 		for (var d = 0; d < data[a].equipo1.jugadores.length; d++) {
 
@@ -114,8 +116,8 @@ function lista2() {
 			jugadores.textContent = data[a].equipo1.jugadores[d].nombre + " " + data[a].equipo1.jugadores[d].posicion;
 			listaul.appendChild(jugadores);
 		}
-			lista.appendChild(listaul);
-		
+		lista.appendChild(listaul);
+
 
 		for (var f = 0; f < data[a].equipo2.jugadores.length; f++) {
 
@@ -124,7 +126,7 @@ function lista2() {
 			listaul2.appendChild(jugadores2);
 		}
 		lista2.appendChild(listaul2);
-		
+
 
 
 
@@ -135,18 +137,15 @@ function lista2() {
 
 ////////////////////////////filtro//////////////////////////////////////////////
 
-
 function filtro() {
 
 	var input = document.getElementById("search");
 	var filter = input.value.toUpperCase();
 	var table = document.getElementById("myUL");
 	var tr = table.getElementsByTagName("li");
-
 	for (var i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("a")[0];
-		if (td) {
-			if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+		if (tr[i]) {
+			if (tr[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
 				tr[i].style.display = "";
 			} else {
 				tr[i].style.display = "none";
@@ -155,76 +154,93 @@ function filtro() {
 	}
 }
 
-
-
 /////////////////////////////show and hide//////////////////////////////////////////////////
 
 function f1() {
-    var x = document.getElementById("primer");
+	var x = document.getElementById("primer");
 	var z = document.getElementById("botmenu");
-	
-	
-    if (x.style.display === "none"){
-		//display="block"// {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+
+	if (x.style.display === "none" && z.style.display === "block") {
+		x.style.display = "block";
+		z.style.display = "none";
+	} else {
+		x.style.display = "none";
+		z.style.display = "block";
+	}
 }
 
 function f2() {
-    var x = document.getElementById("segundo");
-	
-	
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+	var x = document.getElementById("segundo");
+	var z = document.getElementById("botmenu");
+
+	if (x.style.display === "none" && z.style.display === "block") {
+		x.style.display = "block";
+		z.style.display = "none";
+	} else {
+		x.style.display = "none";
+		z.style.display = "block";
+	}
 }
 
 function f3() {
-    var x = document.getElementById("tercero");
-	
-	
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+	var x = document.getElementById("tercero");
+	var z = document.getElementById("botmenu");
+
+
+	if (x.style.display === "none" && z.style.display === "block") {
+		x.style.display = "block";
+		z.style.display = "none";
+	} else {
+		x.style.display = "none";
+		z.style.display = "block";
+	}
 }
 
 function f4() {
-    var x = document.getElementById("cuarto");
-	
-	
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+	var x = document.getElementById("cuarto");
+	var z = document.getElementById("botmenu");
+
+
+	if (x.style.display === "none" && z.style.display === "block") {
+		x.style.display = "block";
+		z.style.display = "none";
+	} else {
+		x.style.display = "none";
+		z.style.display = "block";
+	}
 }
 
 function f5() {
-    var x = document.getElementById("quinto");
-	
-	
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+	var x = document.getElementById("quinto");
+	var z = document.getElementById("botmenu");
+
+	if (x.style.display === "none" && z.style.display === "block") {
+		x.style.display = "block";
+		z.style.display = "none";
+	} else {
+		x.style.display = "none";
+		z.style.display = "block";
+	}
 }
+
 function f6() {
-    var x = document.getElementById("info");
-	
-	
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+	var x = document.getElementById("info");
+	var z = document.getElementById("botmenu");
+
+
+	if (x.style.display === "none" && z.style.display === "block") {
+		x.style.display = "block";
+		z.style.display = "none";
+	} else {
+		x.style.display = "none";
+		z.style.display = "block";
+	}
 }
-
-
-
+function button(){
+	var z = document.getElementById("botmenu");
+	if(z.style.display === "none")
+		z.style.display = "block";
+	else{
+		z.style.display = "none";
+	}
+}
