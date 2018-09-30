@@ -31,8 +31,7 @@
 					</div>
 					<div id="collapse1" class="panel-collapse collapse">
 						<ul class="list-group">
-							<li class="list-group-item">Game info</li>
-							<li class="list-group-item">Rules</li>
+							<li class="list-group-item"><a href="https://www.fifa.com/development/education-and-technical/referees/laws-of-the-game.html" target="_blank">Rules</a></li>
 							<li class="list-group-item"><a href="mailto:someone@example.com?Subje" target="_top">Contact</a></li>
 						</ul>
 					</div>
@@ -46,15 +45,18 @@
 			<div id="log">
 				<h2 class="text-center" style="color: black">NYSL</h2>
 				<div id="back">
-							<img src="images/back-icon-2903.png" onclick="button()" width="45" heigth="45">
+					<img src="images/back-icon-2903.png" onclick="button()" width="45" heigth="45">
 				</div>
 
 				<image src="images/nysl_logo.png" width="64" height="60"></image>
 
 			</div>
 			<div class="text-right">
-				<div><button><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></button></div>
-				<div><button><a href="#"><span class="glyphicons glyphicons-chat"></span> chat</a></button></div>
+				<div id="chat">
+					<div><button id="login" class="glyphicon glyphicon-user">Login</button></div>
+					<div><button id="logout" class="glyphicon glyphicon-user">Logout</button></div>
+					<div><button id="chatbtn" class="glyphicons glyphicons-chat">chat</button></div>
+				</div>
 			</div>
 		</header>
 	</div>
@@ -121,6 +123,7 @@
 		<div id="dinamical">
 			<ul id="list">
 			</ul>
+			<iframe id="mapa" src=""></iframe>
 		</div>
 
 
@@ -329,65 +332,56 @@
 				</div>
 			</div>
 		</div>
+	<!------------------------------------------------chat------------------------------------------------------>
+	<div id="chatsection">
+	<div id="posts">chat la cotorra</div>
+		<div id="enviar">
+			<input name="usermsg" type="text" id="textInput" placeholder="...">
+			<button id="submitmsg" value="Send">Send</button>
+		</div>
+	
+	</div>	
 	</div>
-
+<!------------------------------------------------------------------------------------------------------------------------->
 
 	<div class="text-right">
-		<div class="container">
+		<div class="container" id="dawn">
 			<button onclick="f6()"><a><span class="glyphicon glyphicon-info-sign"></span></a>info</button>
 			<button><a href="mailto:someone@example.com?Subje" target="_top"><span class="glyphicon glyphicon-envelope"></span></a>Email</button>
 		</div>
 	</div>
-	<!------------------------------------------------- chat ------------------------------------>
-<!--
-<div id="wrapper">
-    <div id="menu">
-        <p class="welcome">Welcome</p>
-        <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
-        <div style="clear:both"></div>
-    </div>
--->
-     
-<!--
-    <div id="chatbox"></div>
-     
-    <form name="message" action="">
-        <input name="usermsg" type="text" id="usermsg" size="63" />
-        <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
-	</form>
-	</div>
--->
+	
 
-		<!------------------------------------------------- div information ------------------------------------>
-		<div id="info" class="container">
+	<!------------------------------------------------- div information ------------------------------------>
+	<div id="info" class="container">
+		<div>
+			<h2>Information</h2>
 			<div>
-				<h2>Information</h2>
-				<div>
-					<p>this is button information, if you have some problem with our web app, please contact us, and we fix any problem that you tell us.
-				</div>
+				<p>this is button information, if you have some problem with our web app, please contact us, and we fix any problem that you tell us.
 			</div>
 		</div>
+	</div>
 
 
-		<footer class="text-center">All Rigths Reserved @2018 powered by kanh02</footer>
+	<footer class="text-center">All Rigths Reserved @2018 powered by kanh02</footer>
 
-		<!--	<script src="prueba.js"></script>-->
-		<script src="js/powerful.js"></script>
-		<script src="css/style.css"></script>
-		<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
-		<script>
-			// Initialize Firebase
-			var config = {
-				apiKey: "AIzaSyC_5iMP5dL2pQvRpk9hfK2K-dyMgp9ygRg",
-				authDomain: "mobile-nysl.firebaseapp.com",
-				databaseURL: "https://mobile-nysl.firebaseio.com",
-				projectId: "mobile-nysl",
-				storageBucket: "mobile-nysl.appspot.com",
-				messagingSenderId: "362392854931"
-			};
-			firebase.initializeApp(config);
+	<!--	<script src="prueba.js"></script>-->
+	<script src="css/style.css"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyC_5iMP5dL2pQvRpk9hfK2K-dyMgp9ygRg",
+			authDomain: "mobile-nysl.firebaseapp.com",
+			databaseURL: "https://mobile-nysl.firebaseio.com",
+			projectId: "mobile-nysl",
+			storageBucket: "mobile-nysl.appspot.com",
+			messagingSenderId: "362392854931"
+		};
+		firebase.initializeApp(config);
 
-		</script>
+	</script>
+	<script src="js/powerful.js"></script>
 
 </body>
 
